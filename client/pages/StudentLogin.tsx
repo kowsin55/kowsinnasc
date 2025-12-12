@@ -106,9 +106,7 @@ export default function StudentLogin() {
             {/* Demo Info */}
             <div className="mt-8 p-4 bg-slate-700/30 border border-slate-600 rounded-lg">
               <p className="text-xs text-slate-400 mb-2">Demo Registration Numbers:</p>
-              <p className="text-sm text-slate-300 font-mono space-y-1">
-                <div>STU001 • STU002 • STU003</div>
-              </p>
+              <p className="text-sm text-slate-300 font-mono">STU001 • STU002 • STU003</p>
             </div>
 
             {/* Back to Home */}
