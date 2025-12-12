@@ -44,7 +44,10 @@ export default function AdminLogin() {
       {/* Navigation */}
       <nav className="border-b border-slate-700 bg-slate-900/50 backdrop-blur-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition">
+          <Link
+            to="/"
+            className="flex items-center gap-2 hover:opacity-80 transition"
+          >
             <Building2 className="w-8 h-8 text-blue-500" />
             <span className="text-xl font-bold text-white">RoomFinder</span>
           </Link>
@@ -65,8 +68,12 @@ export default function AdminLogin() {
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building2 className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-3xl font-bold text-white mb-2">Admin Panel</h1>
-              <p className="text-slate-400">Manage rooms and update information</p>
+              <h1 className="text-3xl font-bold text-white mb-2">
+                Admin Panel
+              </h1>
+              <p className="text-slate-400">
+                Manage rooms and update information
+              </p>
             </div>
 
             {/* Form */}
@@ -79,7 +86,10 @@ export default function AdminLogin() {
               )}
 
               <div>
-                <label htmlFor="adminId" className="block text-sm font-medium text-slate-300 mb-2">
+                <label
+                  htmlFor="adminId"
+                  className="block text-sm font-medium text-slate-300 mb-2"
+                >
                   Admin ID
                 </label>
                 <Input
@@ -95,7 +105,10 @@ export default function AdminLogin() {
               </div>
 
               <div>
-                <label htmlFor="password" className="block text-sm font-medium text-slate-300 mb-2">
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-medium text-slate-300 mb-2"
+                >
                   Password
                 </label>
                 <Input
@@ -122,7 +135,9 @@ export default function AdminLogin() {
 
             {/* Demo Info */}
             <div className="mt-8 p-4 bg-slate-700/30 border border-slate-600 rounded-lg">
-              <p className="text-xs text-slate-400 mb-2">Demo Admin Credentials:</p>
+              <p className="text-xs text-slate-400 mb-2">
+                Demo Admin Credentials:
+              </p>
               <div className="text-sm text-slate-300 font-mono space-y-1">
                 <p>ID: admin1</p>
                 <p>Pass: admin123</p>
@@ -131,7 +146,10 @@ export default function AdminLogin() {
 
             {/* Back to Home */}
             <div className="text-center mt-6">
-              <Link to="/" className="text-slate-400 hover:text-slate-200 text-sm transition">
+              <Link
+                to="/"
+                className="text-slate-400 hover:text-slate-200 text-sm transition"
+              >
                 Back to Home
               </Link>
             </div>

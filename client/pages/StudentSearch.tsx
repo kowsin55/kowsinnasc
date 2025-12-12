@@ -70,7 +70,10 @@ export default function StudentSearch() {
       {/* Navigation */}
       <nav className="border-b border-slate-700 bg-slate-900/50 backdrop-blur-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition">
+          <Link
+            to="/"
+            className="flex items-center gap-2 hover:opacity-80 transition"
+          >
             <Building2 className="w-8 h-8 text-blue-500" />
             <span className="text-xl font-bold text-white">RoomFinder</span>
           </Link>
@@ -105,7 +108,10 @@ export default function StudentSearch() {
         </div>
 
         {/* Search Form */}
-        <form onSubmit={handleSearch} className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 mb-12 backdrop-blur-xl">
+        <form
+          onSubmit={handleSearch}
+          className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 mb-12 backdrop-blur-xl"
+        >
           <h2 className="text-2xl font-bold text-white mb-8">Search Filters</h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -228,22 +234,30 @@ export default function StudentSearch() {
                     <h3 className="text-xl font-bold text-white mb-1">
                       Room {room.roomNumber}
                     </h3>
-                    <p className="text-slate-400 text-sm">{room.departmentName}</p>
+                    <p className="text-slate-400 text-sm">
+                      {room.departmentName}
+                    </p>
                   </div>
 
                   <div className="space-y-3 text-sm">
                     <div className="flex justify-between">
                       <span className="text-slate-400">Block:</span>
-                      <span className="text-slate-200 font-medium">{room.blockName}</span>
+                      <span className="text-slate-200 font-medium">
+                        {room.blockName}
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-slate-400">Floor:</span>
-                      <span className="text-slate-200 font-medium">{room.floorNumber}</span>
+                      <span className="text-slate-200 font-medium">
+                        {room.floorNumber}
+                      </span>
                     </div>
                     {room.capacity && (
                       <div className="flex justify-between">
                         <span className="text-slate-400">Capacity:</span>
-                        <span className="text-slate-200 font-medium">{room.capacity}</span>
+                        <span className="text-slate-200 font-medium">
+                          {room.capacity}
+                        </span>
                       </div>
                     )}
                   </div>

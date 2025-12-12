@@ -79,7 +79,10 @@ function initializeSampleData() {
 
   // Initialize sample students
   ["STU001", "STU002", "STU003"].forEach((regNum) => {
-    store.students.set(regNum, { registrationNumber: regNum, createdAt: Date.now() });
+    store.students.set(regNum, {
+      registrationNumber: regNum,
+      createdAt: Date.now(),
+    });
   });
 }
 
@@ -106,7 +109,10 @@ export function createRoom(room: Omit<Room, "id" | "createdAt">): Room {
   return newRoom;
 }
 
-export function updateRoom(id: string, updates: Partial<Omit<Room, "id" | "createdAt">>): Room | undefined {
+export function updateRoom(
+  id: string,
+  updates: Partial<Omit<Room, "id" | "createdAt">>,
+): Room | undefined {
   const room = store.rooms.get(id);
   if (!room) return undefined;
 
@@ -144,16 +150,30 @@ export function searchRooms(query: {
   const rooms = Array.from(store.rooms.values());
 
   return rooms.filter((room) => {
-    if (query.departmentName && !room.departmentName.toLowerCase().includes(query.departmentName.toLowerCase())) {
+    if (
+      query.departmentName &&
+      !room.departmentName
+        .toLowerCase()
+        .includes(query.departmentName.toLowerCase())
+    ) {
       return false;
     }
-    if (query.blockName && !room.blockName.toLowerCase().includes(query.blockName.toLowerCase())) {
+    if (
+      query.blockName &&
+      !room.blockName.toLowerCase().includes(query.blockName.toLowerCase())
+    ) {
       return false;
     }
-    if (query.floorNumber !== undefined && room.floorNumber !== query.floorNumber) {
+    if (
+      query.floorNumber !== undefined &&
+      room.floorNumber !== query.floorNumber
+    ) {
       return false;
     }
-    if (query.roomNumber && !room.roomNumber.toLowerCase().includes(query.roomNumber.toLowerCase())) {
+    if (
+      query.roomNumber &&
+      !room.roomNumber.toLowerCase().includes(query.roomNumber.toLowerCase())
+    ) {
       return false;
     }
     return true;

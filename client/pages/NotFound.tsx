@@ -8,7 +8,10 @@ export default function NotFound() {
       {/* Navigation */}
       <nav className="border-b border-slate-700 bg-slate-900/50 backdrop-blur-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition">
+          <Link
+            to="/"
+            className="flex items-center gap-2 hover:opacity-80 transition"
+          >
             <Building2 className="w-8 h-8 text-blue-500" />
             <span className="text-xl font-bold text-white">RoomFinder</span>
           </Link>
@@ -28,7 +31,8 @@ export default function NotFound() {
           </h1>
           <h2 className="text-3xl font-bold text-white mb-3">Page Not Found</h2>
           <p className="text-slate-400 mb-8">
-            The page you're looking for doesn't exist. Let's get you back on track.
+            The page you're looking for doesn't exist. Let's get you back on
+            track.
           </p>
 
           <Link to="/">

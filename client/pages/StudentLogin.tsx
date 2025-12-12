@@ -29,7 +29,10 @@ export default function StudentLogin() {
         localStorage.setItem("registrationNumber", registrationNumber);
         navigate("/student-search");
       } else {
-        setError(data.message || "Invalid registration number. Try STU001, STU002, or STU003");
+        setError(
+          data.message ||
+            "Invalid registration number. Try STU001, STU002, or STU003",
+        );
       }
     } catch (err) {
       setError("Network error. Please try again.");
@@ -43,7 +46,10 @@ export default function StudentLogin() {
       {/* Navigation */}
       <nav className="border-b border-slate-700 bg-slate-900/50 backdrop-blur-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition">
+          <Link
+            to="/"
+            className="flex items-center gap-2 hover:opacity-80 transition"
+          >
             <Building2 className="w-8 h-8 text-blue-500" />
             <span className="text-xl font-bold text-white">RoomFinder</span>
           </Link>
@@ -64,8 +70,12 @@ export default function StudentLogin() {
               <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building2 className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-3xl font-bold text-white mb-2">Student Login</h1>
-              <p className="text-slate-400">Enter your registration number to search for rooms</p>
+              <h1 className="text-3xl font-bold text-white mb-2">
+                Student Login
+              </h1>
+              <p className="text-slate-400">
+                Enter your registration number to search for rooms
+              </p>
             </div>
 
             {/* Form */}
@@ -78,7 +88,10 @@ export default function StudentLogin() {
               )}
 
               <div>
-                <label htmlFor="regNum" className="block text-sm font-medium text-slate-300 mb-2">
+                <label
+                  htmlFor="regNum"
+                  className="block text-sm font-medium text-slate-300 mb-2"
+                >
                   Registration Number
                 </label>
                 <Input
@@ -105,13 +118,20 @@ export default function StudentLogin() {
 
             {/* Demo Info */}
             <div className="mt-8 p-4 bg-slate-700/30 border border-slate-600 rounded-lg">
-              <p className="text-xs text-slate-400 mb-2">Demo Registration Numbers:</p>
-              <p className="text-sm text-slate-300 font-mono">STU001 • STU002 • STU003</p>
+              <p className="text-xs text-slate-400 mb-2">
+                Demo Registration Numbers:
+              </p>
+              <p className="text-sm text-slate-300 font-mono">
+                STU001 • STU002 • STU003
+              </p>
             </div>
 
             {/* Back to Home */}
             <div className="text-center mt-6">
-              <Link to="/" className="text-slate-400 hover:text-slate-200 text-sm transition">
+              <Link
+                to="/"
+                className="text-slate-400 hover:text-slate-200 text-sm transition"
+              >
                 Back to Home
               </Link>
             </div>

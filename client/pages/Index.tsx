@@ -14,7 +14,10 @@ export default function Index() {
           </div>
           <div className="flex gap-3">
             <Link to="/student-login">
-              <Button variant="outline" className="text-slate-300 border-slate-600 hover:bg-slate-800">
+              <Button
+                variant="outline"
+                className="text-slate-300 border-slate-600 hover:bg-slate-800"
+              >
                 Student Login
               </Button>
             </Link>
@@ -38,10 +41,15 @@ export default function Index() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Find Your Room
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"> Instantly</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                {" "}
+                Instantly
+              </span>
             </h1>
             <p className="text-xl text-slate-400 mb-8 leading-relaxed">
-              A smart college room and department locator system. Search for any room by department, block, floor, or room number. Real-time updates keep you always informed.
+              A smart college room and department locator system. Search for any
+              room by department, block, floor, or room number. Real-time
+              updates keep you always informed.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -51,7 +59,10 @@ export default function Index() {
                 </Button>
               </Link>
               <Link to="/admin-login">
-                <Button variant="outline" className="w-full sm:w-auto border-slate-600 text-slate-300 hover:bg-slate-800 px-8 py-6 text-lg font-semibold rounded-lg">
+                <Button
+                  variant="outline"
+                  className="w-full sm:w-auto border-slate-600 text-slate-300 hover:bg-slate-800 px-8 py-6 text-lg font-semibold rounded-lg"
+                >
                   Admin Panel
                 </Button>
               </Link>
@@ -63,7 +74,9 @@ export default function Index() {
               <div className="space-y-2 text-sm">
                 <div className="text-left">
                   <p className="text-slate-500">Student Registration:</p>
-                  <p className="text-slate-200 font-mono">STU001, STU002, STU003</p>
+                  <p className="text-slate-200 font-mono">
+                    STU001, STU002, STU003
+                  </p>
                 </div>
                 <div className="text-left">
                   <p className="text-slate-500">Admin Login:</p>
@@ -77,7 +90,9 @@ export default function Index() {
 
       {/* Features Section */}
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Why Choose RoomFinder?</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          Why Choose RoomFinder?
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Feature 1 */}
@@ -85,9 +100,12 @@ export default function Index() {
             <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
               <Zap className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-3">Instant Search</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Instant Search
+            </h3>
             <p className="text-slate-400">
-              Search for rooms by department, block, floor, or room number. Get results instantly.
+              Search for rooms by department, block, floor, or room number. Get
+              results instantly.
             </p>
           </div>
 
@@ -96,9 +114,12 @@ export default function Index() {
             <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center mb-4">
               <UserCheck className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-3">Real-Time Updates</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Real-Time Updates
+            </h3>
             <p className="text-slate-400">
-              Room information is always up-to-date. Changes made by admins reflect instantly.
+              Room information is always up-to-date. Changes made by admins
+              reflect instantly.
             </p>
           </div>
 
@@ -107,9 +128,12 @@ export default function Index() {
             <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
               <Key className="w-6 h-6 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-3">Secure & Simple</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Secure & Simple
+            </h3>
             <p className="text-slate-400">
-              Secure authentication system with a clean, intuitive interface for all users.
+              Secure authentication system with a clean, intuitive interface for
+              all users.
             </p>
           </div>
         </div>
@@ -117,15 +141,25 @@ export default function Index() {
 
       {/* How It Works */}
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-700">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">How It Works</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          How It Works
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-bold text-white mb-6">For Students</h3>
             <div className="space-y-4">
               {[
-                { number: "1", title: "Login", desc: "Use your registration number to log in" },
-                { number: "2", title: "Search", desc: "Enter room details to search" },
+                {
+                  number: "1",
+                  title: "Login",
+                  desc: "Use your registration number to log in",
+                },
+                {
+                  number: "2",
+                  title: "Search",
+                  desc: "Enter room details to search",
+                },
                 {
                   number: "3",
                   title: "Find",
@@ -149,9 +183,21 @@ export default function Index() {
             <h3 className="text-2xl font-bold text-white mb-6">For Admins</h3>
             <div className="space-y-4">
               {[
-                { number: "1", title: "Admin Login", desc: "Access the admin dashboard" },
-                { number: "2", title: "Manage Rooms", desc: "Add, edit, or delete room information" },
-                { number: "3", title: "Instant Sync", desc: "Changes reflect to students immediately" },
+                {
+                  number: "1",
+                  title: "Admin Login",
+                  desc: "Access the admin dashboard",
+                },
+                {
+                  number: "2",
+                  title: "Manage Rooms",
+                  desc: "Add, edit, or delete room information",
+                },
+                {
+                  number: "3",
+                  title: "Instant Sync",
+                  desc: "Changes reflect to students immediately",
+                },
               ].map((step) => (
                 <div key={step.number} className="flex gap-4">
                   <div className="w-10 h-10 rounded-full bg-cyan-600 flex items-center justify-center flex-shrink-0">
@@ -176,7 +222,9 @@ export default function Index() {
               <Building2 className="w-6 h-6 text-blue-500" />
               <span className="font-semibold text-white">RoomFinder</span>
             </div>
-            <p className="text-slate-400 text-sm">© 2024 RoomFinder. Find your room, instantly.</p>
+            <p className="text-slate-400 text-sm">
+              © 2024 RoomFinder. Find your room, instantly.
+            </p>
           </div>
         </div>
       </footer>

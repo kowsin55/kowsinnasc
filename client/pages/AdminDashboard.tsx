@@ -3,7 +3,15 @@ import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Room, RoomsResponse, CreateRoomRequest } from "@shared/api";
-import { Building2, LogOut, Trash2, Edit2, Plus, AlertCircle, CheckCircle } from "lucide-react";
+import {
+  Building2,
+  LogOut,
+  Trash2,
+  Edit2,
+  Plus,
+  AlertCircle,
+  CheckCircle,
+} from "lucide-react";
 
 export default function AdminDashboard() {
   const navigate = useNavigate();
@@ -125,7 +133,9 @@ export default function AdminDashboard() {
 
       if (response.ok) {
         setSuccessMessage(
-          editingRoomId ? "Room updated successfully!" : "Room created successfully!"
+          editingRoomId
+            ? "Room updated successfully!"
+            : "Room created successfully!",
         );
         handleCloseModal();
         fetchRooms();
@@ -179,12 +189,19 @@ export default function AdminDashboard() {
       {/* Navigation */}
       <nav className="border-b border-slate-700 bg-slate-900/50 backdrop-blur-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition">
+          <Link
+            to="/"
+            className="flex items-center gap-2 hover:opacity-80 transition"
+          >
             <Building2 className="w-8 h-8 text-cyan-500" />
-            <span className="text-xl font-bold text-white">RoomFinder Admin</span>
+            <span className="text-xl font-bold text-white">
+              RoomFinder Admin
+            </span>
           </Link>
           <div className="flex items-center gap-4">
-            <span className="text-slate-400 text-sm hidden sm:block">{adminId}</span>
+            <span className="text-slate-400 text-sm hidden sm:block">
+              {adminId}
+            </span>
             <Button
               onClick={handleLogout}
               variant="outline"
@@ -206,7 +223,9 @@ export default function AdminDashboard() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-12">
           <div>
-            <h1 className="text-4xl font-bold text-white mb-3">Room Management</h1>
+            <h1 className="text-4xl font-bold text-white mb-3">
+              Room Management
+            </h1>
             <p className="text-slate-400">Manage all rooms in the system</p>
           </div>
           <Button
@@ -254,18 +273,24 @@ export default function AdminDashboard() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-slate-700">
-                  <th className="text-left py-4 px-4 font-semibold text-slate-300">Room</th>
+                  <th className="text-left py-4 px-4 font-semibold text-slate-300">
+                    Room
+                  </th>
                   <th className="text-left py-4 px-4 font-semibold text-slate-300 hidden sm:table-cell">
                     Block
                   </th>
                   <th className="text-left py-4 px-4 font-semibold text-slate-300 hidden md:table-cell">
                     Floor
                   </th>
-                  <th className="text-left py-4 px-4 font-semibold text-slate-300">Department</th>
+                  <th className="text-left py-4 px-4 font-semibold text-slate-300">
+                    Department
+                  </th>
                   <th className="text-left py-4 px-4 font-semibold text-slate-300 hidden lg:table-cell">
                     Capacity
                   </th>
-                  <th className="text-right py-4 px-4 font-semibold text-slate-300">Actions</th>
+                  <th className="text-right py-4 px-4 font-semibold text-slate-300">
+                    Actions
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -274,14 +299,18 @@ export default function AdminDashboard() {
                     key={room.id}
                     className="border-b border-slate-700 hover:bg-slate-800/50 transition"
                   >
-                    <td className="py-4 px-4 text-white font-medium">{room.roomNumber}</td>
+                    <td className="py-4 px-4 text-white font-medium">
+                      {room.roomNumber}
+                    </td>
                     <td className="py-4 px-4 text-slate-400 hidden sm:table-cell">
                       {room.blockName}
                     </td>
                     <td className="py-4 px-4 text-slate-400 hidden md:table-cell">
                       {room.floorNumber}
                     </td>
-                    <td className="py-4 px-4 text-slate-400">{room.departmentName}</td>
+                    <td className="py-4 px-4 text-slate-400">
+                      {room.departmentName}
+                    </td>
                     <td className="py-4 px-4 text-slate-400 hidden lg:table-cell">
                       {room.capacity || "-"}
                     </td>
