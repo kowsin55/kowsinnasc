@@ -123,10 +123,10 @@ export default function AdminLogin() {
             {/* Demo Info */}
             <div className="mt-8 p-4 bg-slate-700/30 border border-slate-600 rounded-lg">
               <p className="text-xs text-slate-400 mb-2">Demo Admin Credentials:</p>
-              <p className="text-sm text-slate-300 font-mono">
-                <div>ID: admin1</div>
-                <div>Pass: admin123</div>
-              </p>
+              <div className="text-sm text-slate-300 font-mono space-y-1">
+                <p>ID: admin1</p>
+                <p>Pass: admin123</p>
+              </div>
             </div>
 
             {/* Back to Home */}
