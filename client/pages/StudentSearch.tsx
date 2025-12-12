@@ -36,7 +36,7 @@ export default function StudentSearch() {
     try {
       let url = "/api/rooms";
       if (query) {
-        url += `?${query}`;
+        url = `/api/rooms/search?${query}`;
       }
       const response = await fetch(url);
       const data: RoomsResponse = await response.json();
